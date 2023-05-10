@@ -1,0 +1,28 @@
+{
+  "name": "${addon.key}",
+  "key": "com.techstack.myPlugin",
+  "baseUrl": "${addon.base-url}",
+  "vendor": {
+    "name": "TechStack",
+    "url": "https://tech-stack.com/"
+  },
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "modules": {
+    "generalPages": [
+      {
+        "key": "hello-world",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "HelloWorld"
+        },
+        "url": "/hello-world"
+      }
+    ]
+  }
+}

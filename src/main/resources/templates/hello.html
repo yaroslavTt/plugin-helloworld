@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Getting started</title>-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">-->
+<!--    <script src="https://connect-cdn.atl-paas.net/all.js" async></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<section id="content" class="ac-content">-->
+<!--    <h1>Hello World</h1>-->
+<!--    <h2 th:text="'Hello, User '  + ${#authentication.getName()} + '! How are you doing?'"></h2>-->
+<!--</section>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{layout :: atlassianConnectResources}">
+    <title>Atlassian Connect Spring Boot Thymeleaf Sample</title>
+</head>
+<body class="aui-page-hybrid">
+<section id="content" role="main">
+    <header class="aui-page-header">
+        <div class="aui-page-header-inner">
+            <div class="aui-page-header-main intro-header">
+                <h1>Thymeleaf Sample</h1>
+            </div>
+        </div>
+    </header>
+    <div class="aui-page-panel main-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-item">
+                <div class="aui-group">
+                    <div class="aui-item">Hello, <span th:text="${#authentication.principal.userAccountId.get()}">User</span>!</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</body>
+</html>
